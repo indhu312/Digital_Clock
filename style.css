@@ -1,0 +1,68 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Noto+Color+Emoji&family=Poppins:wght@300;400;500;700&family=Shadows+Into+Light&display=swap');
+  @font-face{
+    src:url('digital-7.mono.ttf');
+    font-family:'Digital-7 Mono';
+  }
+  :root{
+    --light-color:rgb(252, 13, 5);
+  }
+  *{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins',sans-serif;
+  }
+  body{
+    height: 100vh;
+    width: 100vw;
+    background-color:black;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: null;
+    cursor:pointer;
+    gap:20px; 
+  }
+  h2{
+    color: dimgrey;
+    font-size: medium;
+    font-weight: 700px;
+    
+  }
+  .clck{
+    width: 600px;
+    height:300px;
+    background-color:#1c2222;
+    border: 50px solid #91b496;
+    padding: 10px;
+    border-radius:10px;
+    box-shadow:rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    font-size :60px;
+    text-align:center;
+    line-height:180px;
+    
+
+  }
+  .clock{
+    font-family:digital-7;
+    color:rgb(253, 56, 7);
+    text-shadow:0 0 20px var(--light-color);
+    position: relative;
+    font-family: 'Digital-7 Mono';
+
+  }
+  
+  
+  .clock::before{
+    content: '';
+    position:absolute;
+    left:0;
+    top:0;
+    background-color: var(--light-color);
+    width:100%;
+    height:100%;
+    opacity:0.1;
+    filter:blur(40px);
+  }
