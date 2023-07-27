@@ -8,12 +8,12 @@ function Clock(){
     var sec=time.getSeconds();
     var txt="AM";
     //displays in 12 hr
-    if(hr>12){
-        hr=hr-12;
-        txt="PM";
-    }else if(hr==0){
-        hr=12;
-        txt="AM";
+    if(hr===0){
+        hr<=12;
+    }
+    if(hr>12 && mins === 0 && sec !=0){
+        hr=-12;
+        txt="PM"
     }
     //single digit that includes zero in it'09:02:01'
     hr=hr<10?'0'+hr:hr;
